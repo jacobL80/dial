@@ -1,0 +1,219 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #BBB;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+
+.phone {
+	width: 350px;
+	height: 650px;
+	background: #000;
+	-moz-border-radius: 40px;
+	-webkit-border-radius: 40px;
+	border-radius: 40px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 10vh;
+}
+
+.screen {
+    margin: auto;
+	width: 310px;
+	height: 540px;
+    margin-top: 50px;
+	background: #FFF;
+
+}
+
+.controls {
+    width: 310px;
+    height: 20em;
+    margin: auto;
+    margin-top: 260px;
+    position: fixed;
+    margin-bottom: 0;
+}
+
+.dial, .numberRow {
+    position: absolute;
+    width: 310px;
+    background-color: #FFF;
+    border-top: 1px solid #DDD;
+}
+
+.dial {
+    bottom: 0;
+}
+
+.asterisk {
+    width: 20px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 8px;
+}
+
+.asteriskButton {
+    width: 20px!important;
+}
+
+.voicemail {
+    width: 1.6em;
+    margin-top: -5px;
+}
+
+.delete {
+    width: 30px;
+}
+
+.subtext {
+    color: #666;
+    margin-top: -.8em;
+    font-weight: 500;
+    font-size: .4em;
+}
+
+.row {
+    margin: 0;
+    padding-top: .7em;
+}
+
+.rowInner {
+    margin-left: auto;
+    margin-right: auto;
+    height: 55px;
+    width: fit-content;
+}
+
+.numberRow {
+    height: 60px;
+    bottom: 270px;
+    text-align: center;
+    font-size: 30px;
+    padding-top: .5em;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    transition: .2s ease;
+}
+
+.slide-in {
+    -webkit-animation: slide-in .2s forwards;
+    animation: slide-in .2s forwards;
+}
+
+@-webkit-keyframes slide-in {
+    0% {
+        opacity: 0;
+        bottom: 270px;
+    }
+    
+    100% {
+        opacity: 1;
+        bottom: 290px;
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        bottom: 270px;
+    }
+    
+    100% {
+        opacity: 1;
+        bottom: 290px;
+    }    
+}
+
+.slide-out {
+    -webkit-animation: slide-out .2s forwards;
+    animation: slide-out .2s forwards;
+}
+
+@-webkit-keyframes slide-out {
+    0% {
+        opacity: 1;
+        bottom: 290px;
+    }
+    
+    100% {
+        opacity: 0;
+        bottom: 270px;
+    } 
+}
+
+@keyframes slide-out {
+    0% {
+        opacity: 1;
+        bottom: 290px;
+    } 
+    
+    100% {
+        opacity: 0;
+        bottom: 270px;
+    }  
+}
+
+.button {
+    font-size: 2.5em;
+    margin-left: .2em;
+    margin-right: .2em;
+    text-align: center;
+    width: 70px;
+    transition: .2s ease;
+}
+
+.button:hover {
+    background-color: #CCC;
+    cursor: pointer;
+}
+
+.numberContainer {
+    max-width: 210px;
+    margin: auto;
+    height: 100%;
+}
+
+.number {
+    width: fit-content;
+    overflow: hidden;
+    margin: auto;
+    display: initial;
+}
+
+.back, .button, .number {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */              
+}
+
+.back {
+    cursor: pointer;
+    transition: .2s ease;
+    position: absolute;
+    right: 15px;
+    background-color: #FFF;
+    z-index: 100;
+    margin-top: -1.5em;
+    height: 100%;
+}
+
+
+
+/* Mobile Styles */
+@media (max-width: 800px) {
+    .phone {
+        margin-top: 0;
+    }
+}
