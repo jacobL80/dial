@@ -183,7 +183,6 @@ body {
 }
 
 .number {
-    width: fit-content;
     overflow: hidden;
     margin: auto;
     display: initial;
